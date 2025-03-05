@@ -1,0 +1,90 @@
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    overflow: hidden;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px
+    
+}
+
+.bgstart {
+    background-image: url("/img/hairfrombehind.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70vh;
+    
+}
+
+.baitscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(83, 52, 52, 0.5);
+}
+    
+.saloonbtn {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(290deg, #683943, #7f544c);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(255, 65, 108, 0.3);
+}
+
+.saloonbtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(69, 69, 69, 0.5);
+}
+
+.saloonbtn:active {
+    transform: scale(0.8);
+}
+
+.scroll {
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .bg0 {
+        background-image: url("/img/gallery0.png");
+        height: 100vh;
+        width: 100vw;
+    }
+    .bg1 {
+        background-image: url("/img/gallery1.png");
+        height: 100vh;
+        width: 100vw;
+    }
+    .bg2 {
+        background-image: url("/img/gallery2.png");
+        height: 100vh;
+        width: 100vw;
+    }
+    .bg3 {
+        background-image: url("/img/gallery3.png");
+        height: 100vh;
+        width: 100vw;
+    }
+    .bg4 {
+        background-image: url("/img/gallery4.png");
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+
+nav {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(83, 52, 52);
+}
