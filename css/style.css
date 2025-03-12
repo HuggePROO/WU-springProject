@@ -3,6 +3,12 @@ html {
     
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     overflow: hidden;
     margin-top: 0px;
@@ -13,12 +19,14 @@ body {
 }
 
 .bgstart {
-    background-image: url("/img/hairfrombehind.png");
+    background-image: url("/WU-springProject/img/gallery1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70vh;
     
 }
+
+
 
 .baitscreen {
     display: flex;
@@ -26,9 +34,10 @@ body {
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(83, 52, 52, 0.5);
+    background-color: rgba(83, 52, 52, 0.3);
 }
-    
+
+
 .saloonbtn {
     padding: 12px 24px;
     font-size: 18px;
@@ -51,40 +60,55 @@ body {
     transform: scale(0.8);
 }
 
-.scroll {
-    background-repeat: no-repeat;
-    background-position: center;
-
-    .bg0 {
-        background-image: url("/img/gallery0.png");
-        height: 100vh;
-        width: 100vw;
-    }
-    .bg1 {
-        background-image: url("/img/gallery1.png");
-        height: 100vh;
-        width: 100vw;
-    }
-    .bg2 {
-        background-image: url("/img/gallery2.png");
-        height: 100vh;
-        width: 100vw;
-    }
-    .bg3 {
-        background-image: url("/img/gallery3.png");
-        height: 100vh;
-        width: 100vw;
-    }
-    .bg4 {
-        background-image: url("/img/gallery4.png");
-        height: 100vh;
-        width: 100vw;
-    }
-}
-
 
 nav {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(83, 52, 52);
+    background-image: url("/WU-springProject/img/gallery0.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80vh;
+}
+
+
+#navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    gap: 5vh; 
+}
+
+
+.nav-large-box {
+    width: 80vw;
+    height: 15vh;
+    background: linear-gradient(290deg, #683943, #7f544c);
+    opacity: 0.9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 5vh;
+    box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.nav-small-box {
+    width: calc(100vw - 30vw);
+    height: 10vh;
+    background: linear-gradient(290deg, #683943, #7f544c);
+    box-shadow: 2vw 1vw 2vw rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 2vw 1vw 2vw rgba(0, 0, 0, 0.5);
 }
