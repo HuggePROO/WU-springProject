@@ -1,12 +1,13 @@
 html {
     scroll-behavior: smooth;
-    
+
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -15,15 +16,14 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px
-    
 }
 
 .bgstart {
-    background-image: url("/WU-springProject/img/gallery1.png");
+    background-image: url("/img/gallery1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70vh;
-    
+
 }
 
 
@@ -64,7 +64,7 @@ body {
 nav {
     height: 100vh;
     width: 100vw;
-    background-image: url("/WU-springProject/img/gallery0.png");
+    background-image: url("/img/gallery0.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80vh;
@@ -76,7 +76,7 @@ nav {
     flex-direction: column;
     align-items: center;
     padding-top: 10vh;
-    gap: 5vh; 
+    gap: 5vh;
 }
 
 
@@ -111,4 +111,151 @@ nav {
     font-size: 1.2rem;
     border-radius: 8px;
     box-shadow: 2vw 1vw 2vw rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.nav-small-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(69, 69, 69, 0.5);
+    opacity: 1;
+}
+
+.prismeny {
+    overflow-y: scroll;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    padding-top: 50px;
+    background: linear-gradient(290deg, #683943, #7f544c);
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        z-index: 1000;
+    }
+
+    .title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        transition: 0.3s;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+        z-index: 1000;
+
+
+        div {
+            background-color: #333;
+            height: 4px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            
+        }
+    }
+
+    .hamburger:hover {
+        width: 35px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100px;
+        width: 100px;
+        height: auto;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease;
+        padding-top: 15px;
+        z-index: 999;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 20px;
+
+
+        li {
+            margin: 15px 0;
+        }
+
+    }
+
+
+    .content {
+        margin-top: 60px;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .phone-icon {
+        font-size: 20px;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 600px;
+        text-align: left;
+    }
+
+
+
+    .price-list {
+        list-style: none;
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    .price-list li {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        padding: 5px 0;
+    }
+
+    .price-list li:last-child {
+        border-bottom: none;
+    }
+
+    .price-list .price {
+        font-weight: bold;
+    }
 }
