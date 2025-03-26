@@ -19,7 +19,7 @@ body {
 }
 
 .bgstart {
-    background-image: url("/img/gallery1.png");
+    background-image: url("/WU-springProject/img/gallery1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70vh;
@@ -64,7 +64,7 @@ body {
 nav {
     height: 100vh;
     width: 100vw;
-    background-image: url("/img/gallery0.png");
+    background-image: url("/WU-springProject/img/gallery0.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80vh;
@@ -120,7 +120,7 @@ nav {
     opacity: 1;
 }
 
-.prismeny {
+.pricemenu {
     overflow-y: scroll;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -131,131 +131,180 @@ nav {
     height: auto;
     margin: 0;
     padding-top: 50px;
-    background: linear-gradient(290deg, #683943, #7f544c);
+    background: linear-gradient(90deg,
+    #33221f 0%,
+    #65333e 20%,
+    #543b3b 80%,
+    #33221f 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
 
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(5px);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        z-index: 1000;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    transition: 0.3s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    z-index: 1000;
+
+
+    div {
+        background-color: #333;
+        height: 4px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+
     }
+}
 
-    .title {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-    }
+.hamburger:hover {
+    width: 35px;
+}
 
-    .hamburger {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        transition: 0.3s;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transition: .25s ease-in-out;
-        -moz-transition: .25s ease-in-out;
-        -o-transition: .25s ease-in-out;
-        transition: .25s ease-in-out;
-        z-index: 1000;
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100px;
+    width: 100px;
+    height: auto;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    padding-top: 15px;
+    z-index: 999;
 
-
-        div {
-            background-color: #333;
-            height: 4px;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            
-        }
-    }
-
-    .hamburger:hover {
-        width: 35px;
-    }
-
-    .menu {
-        position: fixed;
-        top: 0;
-        left: -100px;
-        width: 100px;
-        height: auto;
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-        transition: left 0.3s ease;
-        padding-top: 15px;
-        z-index: 999;
-    }
-
-    .menu.active {
-        left: 0;
-    }
-
-    .menu ul {
+    ul {
         list-style: none;
         padding: 20px;
-
 
         li {
             margin: 15px 0;
+            color: #000000;
+            font-weight: bold;
         }
 
     }
+}
 
-
-    .content {
-        margin-top: 60px;
-        padding: 20px;
-        font-size: 18px;
-    }
-
-    .phone-icon {
-        font-size: 20px;
-        color: #000000;
-        cursor: pointer;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 600px;
-        text-align: left;
-    }
+.menu.active {
+    left: 0;
+}
 
 
 
-    .price-list {
-        list-style: none;
-        font-size: 1rem;
-        line-height: 2;
-    }
 
-    .price-list li {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #ddd;
-        padding: 5px 0;
-    }
+.content {
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 18px;
+}
 
-    .price-list li:last-child {
-        border-bottom: none;
-    }
+.phone-icon {
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+}
 
-    .price-list .price {
-        font-weight: bold;
-    }
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+}
+
+
+
+.price-list {
+    list-style: none;
+    font-size: 1rem;
+    line-height: 2;
+
+
+}
+
+.price-list li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.price-list li:last-child {
+    border-bottom: none;
+}
+
+.price-list .price {
+    font-weight: bold;
+}
+
+
+.gallerypage {
+    overflow-y: scroll;
+    height: auto;
+    margin: 0;
+    padding-top: 50px;
+    background: linear-gradient(90deg,
+    #33221f 0%,
+    #65333e 20%,
+    #543b3b 80%,
+    #33221f 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: auto;
+    height: 40vh;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
 }
