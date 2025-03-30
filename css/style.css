@@ -19,10 +19,11 @@ body {
 }
 
 .bgstart {
-    background-image: url("/WU-springProject/img/gallery1.png");
+    background-image: url("/WU-springProject/img/haircut15.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 70vh;
+    
 
 }
 
@@ -64,10 +65,10 @@ body {
 nav {
     height: 100vh;
     width: 100vw;
-    background-image: url("/WU-springProject/img/gallery0.png");
+    background-image: url("/WU-springProject/img/haircut16.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80vh;
+    background-size: cover;
 }
 
 
@@ -93,10 +94,20 @@ nav {
     border-radius: 8px;
     margin-bottom: 5vh;
     box-shadow: 2vw 2vw 2vw rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
-
-
+.status {
+    margin-top: 10px;
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4caf50;
+    /*color: #f44336;*/
+}
 
 .nav-small-box {
     width: calc(100vw - 30vw);
@@ -112,12 +123,33 @@ nav {
     border-radius: 8px;
     box-shadow: 2vw 1vw 2vw rgba(0, 0, 0, 0.5);
     transition: 0.3s;
+    font-size: 36px;
 }
 
 .nav-small-box:hover {
     transform: scale(1.1);
     box-shadow: 0px 6px 15px rgba(69, 69, 69, 0.5);
     opacity: 1;
+}
+
+.logo {
+    width: auto;
+    height: 140px;
+    position: fixed;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+}
+
+.lbg {
+    width: auto;
+    height: 142px;
+    position: fixed;
+    top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
 }
 
 .pricemenu {
@@ -130,7 +162,7 @@ nav {
     align-items: center;
     height: auto;
     margin: 0;
-    padding-top: 50px;
+    padding-top: 0;
     background: linear-gradient(90deg,
     #33221f 0%,
     #65333e 20%,
@@ -138,14 +170,14 @@ nav {
     #33221f 100%);
     background-repeat: no-repeat;
     background-position: center;
-    
+
 }
 
 header {
     position: fixed;
-    top: 0;
+    top: 139px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(5px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -242,6 +274,7 @@ header {
 }
 
 .container {
+    margin-top: 250px;
     width: 90%;
     max-width: 600px;
     text-align: left;
@@ -285,9 +318,12 @@ header {
     #33221f 100%);
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    justify-content: center;
 }
 
 .gallery {
+    margin-top: 180px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -303,8 +339,93 @@ header {
     background-color: #fff;
     object-fit: cover;
     transition: transform 0.3s ease;
+    z-index: -10;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
+    z-index: 1200;
+}
+
+.staffpage {
+    margin: 0;
+    padding-top: 50px;
+    background: linear-gradient(90deg,
+    #33221f 0%,
+    #65333e 20%,
+    #543b3b 80%,
+    #33221f 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stafflist {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    img {
+        width: 30vw;
+        height: 30vw;
+        margin-left: 10px;
+        margin-right: 10px;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 75%, 0% 25%);
+    }
+
+    h1 {
+        text-align: center;
+        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(187, 109, 1) 100%);
+        width: 30vw;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: -2px;
+        height: 60px;
+        padding-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .bgstart {
+        background-image: url("/WU-springProject/img/gallery1.png");
+        background-size: 70vh;
+    }
+
+    nav {
+        background-image: url("/WU-springProject/img/gallery0.png");
+        background-size: 80vh;
+    }
+
+    .stafflist {
+        margin-top: 10vh;
+        
+        img {
+            margin-top: -100px;
+        }
+    }
+
+    .logo {
+        width: 100vw;
+        height: auto;
+    }
+
+    .lbg {
+        height: 0;
+    }
+    header {
+        top: calc((100vw / 1676) * 316);
+    }
+
+    .gallery img {
+        width: auto;
+    height: 30vh;
+    }
 }
