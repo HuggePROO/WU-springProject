@@ -8,31 +8,115 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 
 
-<body>
-    <div class="bgstart">
-        <content class="baitscreen"> 
-            <a href="#navigation">
-                <button class="saloonbtn">Till salongen</button>
-            </a>  
-        </content>
-    </div>
 
-    <nav id="navigation">
-        <div class="nav-large-box">Öppetider</div>
-        <a href="prices.html" class="nav-small-box">Priser</a>
-        <a href="gallery.html" class="nav-small-box">Frisyrer</a>
-        <a href="staff.html" class="nav-small-box">Frisörer</a>
-        <div class="nav-small-box">Telefon</div>
-    </nav>
-    
+<body class="mainscreen">
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="prices.html">Prices</a></li>
+            <li><a href="gallery.html">Haircuts</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+    <header>
+        <nav>
+            <a href="index.html">Studio Shape</a>
+            <a href="index.html">Home</a>
+            <a href="prices.html">Prices</a>
+            <a href="gallery.html">Haircuts</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="bgstart">
+        <main class="startScreen">
+            <h1><a href="#saloon">Studio<br>Shape</a></h1>
+            <p><a href="#saloon">Life isn’t perfect,<br>but your hair can be.</a></p>
+        </main>
+    </div>
+    <section id="saloon">
+        <div class="imageContainer">
+            <div class="imageClip">
+                <img src="img/saloon.jpg" alt="saloon">
+            </div>
+        </div>
+        <div class="textContainer">
+            <h2>The Saloon</h2>
+            <p>Step into our salon and feel instantly at home—where warmth meets style in every strand. From the moment
+                you walk through the door, you're greeted with friendly faces, a relaxed atmosphere, and a passion for
+                making you look and feel your best. Our talented stylists combine trend-savvy techniques with
+                personalized care, ensuring every visit is a comfortable, uplifting experience. Whether you're here for
+                a quick trim or a full transformation, you'll leave with a flawless look and a smile to match.</p>
+        </div>
+    </section>
+    <section id="staffpage">
+        <div class="textContainer">
+            <h2>Staff</h2>
+            <p>Our talented team brings together decades of combined experience and passion for excellence. Each member
+                contributes unique skills and perspectives, allowing us to deliver outstanding results that exceed
+                expectations. Together, we're committed to innovation, quality, and creating meaningful solutions for
+                our clients.</p>
+        </div>
+        <div class="stafflist">
+            <div>
+                <img src="/WU-springProject/img/barber-1.jpg" alt="Office Vader">
+                <h2>Pelle</h2>
+            </div>
+            <div>
+                <img src="/WU-springProject/img/barber-3.jpg" alt="Image 2">
+                <h2>Kajsa</h2>
+            </div>
+            <div>
+                <img src="/WU-springProject/img/barber-2.jpg" alt="Image 3">
+                <h2>Anna</h2>
+            </div>
+        </div>
+    </section>
+    <section class="lastBg">
+        <div id="contact">
+            <div class="contactInfo">
+                <h2>Öppettider</h2>
+                <p><strong>Mån-Torsdag</strong></p>
+                <p><strong>9.00 - 18.00</strong></p>
+                <p><strong>Fredag</strong></p>
+                <p><strong>8.15-17.00</strong></p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="contactInfo">
+                <h2>Telefon</h2>
+                <p><strong>031-265400</strong></p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="contactInfo">
+                <h2><strong>STUDIO SHAPE</strong></h2>
+                <p><strong>Göteborgsv. 35</strong></p>
+                <p><strong>Sävedalen</strong></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Studio Shape - All rights reserved</p>
+        <p>Göteborgsv. 35, Sävedalen | 031-265400</p>
+    </footer>
+
+
 
 
     <script src="js/script.js"></script>
 </body>
-</html>
 
+</html>
